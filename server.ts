@@ -1,13 +1,18 @@
-import app from './index.html'
-import { serve } from 'bun'
+export const request = ({ name, url, params }) => {
+  if (params.type === 'string') {
+    return `${name}-${url}-${JSON.stringify(params)}`
+  }
 
-const server = serve({
-  static: {
-    '/': app,
-  },
-  fetch() {
-    return new Response('404!')
-  },
-})
+  if (params.type === 'json') {
+    return {
+      count: 1,
+      hello: 'world',
+    }
+  }
 
-console.log(`Listening on localhost:${server.port}`)
+  if (params.type === 'response') {
+    return new Response('Hello World!')
+  }
+
+  return 'Missing type.'
+}

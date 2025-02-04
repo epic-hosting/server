@@ -1,8 +1,5 @@
 {
-    "scripts": {
-        "start": "bun server.ts"
-    },
-    "devDependencies": {
-        "@types/bun": "^1.2.0"
-    }
+  "dependencies": {
+    "camelcase": "^8.0.0"
+  }
 }
