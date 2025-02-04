@@ -1,5 +1,8 @@
 {
   "dependencies": {
     "camelcase": "^8.0.0"
+  },
+  "devDependencies": {
+    "@types/bun": "^1.2.2"
   }
 }
